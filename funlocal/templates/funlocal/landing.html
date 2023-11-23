@@ -1,0 +1,175 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title> 
+    <link rel="styleSheet" href="{% static 'funlocal/landing.css' %}" />   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.4/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.4/swiper-bundle.min.js"></script>
+    {% tailwind_css %} 
+
+  </head>
+  <body>
+
+    <header>
+      <div class="header-content" id="headerContent">
+          <div class="cover-image" id="coverImage"></div>
+          <div class="logo-image" id="logoImage"></div>
+          <div class="horizontal-menu" id="horizontalMenu">
+              <!-- Links will be generated here -->
+          </div>
+      </div>
+      <div class="header-description">
+          <div class="about-header" id="aboutHeader">
+            <h2 id="aboutHeaderTitle">Initial Title</h2>
+          </div>
+          <div class="about-description" id="aboutDescription">
+              <p id="aboutParagraph">This is the about description paragraph.</p>
+          </div>
+      </div>
+  </header>
+    
+  
+    <main>
+        
+      <section id="interior" class="section-content">
+        <div class="interior-container">
+            <h2 class="interior-header">Interior</h2>
+            <div class="masonry-interior-container" id="masonry-interior-container">
+                <!-- JavaScript will dynamically populate these masonry items -->
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="section-content">
+      <div class="main-user" id="mainUser">
+        <!-- JavaScript will dynamically populate main user content -->
+    </div>
+    <div class="review-card" id="reviewCard">
+        <!-- JavaScript will dynamically populate review card content -->
+    </div>
+    </section>
+
+    <section id="menu" class="section-content">
+      <div class="menu-container">
+          <div class="menu-header">
+              <h2>Menu</h2>
+          </div>
+          <nav class="menu-navigation">
+              <ul id="menu-navigation-items">
+                  <!-- JavaScript will dynamically populate these items -->
+              </ul>
+          </nav>
+          <div class="menu-grid" id="menu-grid">
+              <!-- JavaScript will dynamically populate the grid items -->
+          </div>
+      </div>
+  </section>
+
+
+    <section id="events" class="section-content">
+      <div class="event-box" id="event-box">
+          <h2 class="event-header">Events</h2>
+      </div>
+      <div class="masonry-event-container" id="masonry-event-container">
+          <!-- JavaScript will dynamically populate these masonry items -->
+      </div>
+  </section>
+
+
+  <section id="posts" class="section-content">
+    
+  </section>
+
+  
+  <section id="info" class="section-content">
+    <div class="info-container">
+      <div class="info-card">
+        <div class="contact">
+          <div class="contact-header">
+            <h2>Contact</h2>
+          </div>
+          <div class="contact-section">
+            <div class="working-hours">
+              <!-- JavaScript will dynamically populate these rows -->
+            </div>
+            <div class="contact-info">
+              <!-- JavaScript will dynamically populate these rows -->
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <!-- Empty for now, Google Map will be implemented using JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+   </main>
+      
+   <footer>
+    <div class="footer-main-section">
+        <div class="social-section">
+            <div class="logo-placeholder" id="logo-placeholder">
+                <!-- Content controlled by JavaScript -->
+            </div>
+            <div class="row" id="social-links">
+                <!-- Links controlled by JavaScript -->
+            </div>
+        </div>
+        <div class="services-section">
+            <div class="column">
+                <div class="products">
+                    <h3>Products</h3>
+                    <ul id="product-list">
+                        <!-- List items controlled by JavaScript -->
+                    </ul>
+                </div>
+                <div class="services">
+                    <h3>Services</h3>
+                    <ul id="service-list">
+                        <!-- List items controlled by JavaScript -->
+                    </ul>
+                </div>
+                <div class="resources">
+                    <h3>Resources</h3>
+                    <ul id="resource-list">
+                        <!-- List items controlled by JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-rights-section">
+        <div class="left-section">
+            <p>All rights reserved</p>
+        </div>
+        <div class="right-section">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+      
+    <!-- <ul>
+      {% for data in landing_page %}
+        <li>{{ data.id }} - ${{ data.email }}</li>
+      {% endfor %}
+        <li>{{ landing_page }}</li>
+    </ul> -->  
+      
+    <script src="{% static 'funlocal/model.js' %}"></script>
+    <script src="{% static 'funlocal/controller.js' %}"></script>   
+    <script src="{% static 'funlocal/landing.js' %}"></script>  
+    
+  </body>
+  
+
+</html>
+
+

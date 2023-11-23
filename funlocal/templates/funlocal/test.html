@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+  </head>
+  <body>
+    <h1>Data from XANO Database</h1>
+    <ul>
+      {% for data in xano_data %}
+      <li>{{ data.id }} - ${{ data.email }}</li>
+      {% endfor %}
+
+      <li>{{ xano_data }}</li>
+    </ul>
+  </body>
+</html>

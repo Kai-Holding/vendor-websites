@@ -1,0 +1,787 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+/* Reset some default browser styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('background.jpg') center/cover no-repeat fixed; /* Set background image for the entire page */
+}
+  
+ /* Header Section */
+ header {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.cover-image {
+  width: 70%;
+  height: 150px;
+  border-radius: 30px;
+  margin: auto ;
+  position: relative;
+}
+.logo-image {
+  width: 10%;
+  height: 175px;
+  border-radius: 15px;
+  margin: auto;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.horizontal-menu {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.horizontal-menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.horizontal-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+.header-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+.about-description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+}
+
+  
+/* Main Section */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+/* Section Content */
+.section-content {
+  background-color: #ffffff;
+  color: #333;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-content, #interior, #info, #menu, #posts, #events, #reviews {
+  flex: 1;
+  text-align: center;
+  margin: 20px 0; /* Add margin for spacing between section items */
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Display section content vertically */
+  justify-content: center; /* Vertically center section content */
+  align-items: center; /* Horizontally center section content */
+}
+  
+
+/* Interior Section */
+#interior { /* Updated section ID */
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Interior Container */
+.interior-container {
+  width: 100%;
+  background-color: #ffffff; /* Background color for the interior container */
+  color: #333; /* Text color */
+  margin: 20px; /* Add margin for spacing between the interior container and other sections */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  text-align: center; /* Center the content horizontally */
+  padding: 20px; /* Add padding to the interior container */
+}
+
+/* Interior Header */
+.interior-header {
+  font-size: 24px;
+  margin-bottom: 20px; /* Add margin below the header */
+}
+
+/* Masonry Container */
+.masonry-interior-container {
+  width: 80%; /* Set container width to 80% of the interior section width */
+  margin: 0 auto; /* Center the container horizontally */
+  column-count: 3; /* Adjust the number of columns as needed */
+  column-gap: 20px; /* Adjust the gap between columns as needed */
+}
+
+/* Style for each masonry item */
+.masonry-interior-item {
+  margin-bottom: 20px; /* Adjust the spacing between items as needed */
+  background-color: #3498db;
+  color: #fff;
+  /* padding: 10px; */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  break-inside: avoid; /* Prevent items from breaking inside columns */
+  width: 100%; /* Each item takes 100% width within its column */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.masonry-interior-item img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+
+/* Reviews Section */
+#reviews {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Main User Section */
+.main-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.circular-image {
+  width: 100px; /* Adjust the size of the circular image */
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+
+/* Review Card Section */
+.review-card {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.review-card h2 {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cards-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card-comment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Card Styles */
+.cards-section > div {
+  flex: 1;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+}
+
+.cards-section  p {
+  text-align: center;
+}
+
+/* User Section in Card Comment Section */
+.user-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  margin-left: 10px;
+  text-align: left;
+}
+
+.user-info p {
+  margin: 0;
+}
+
+/* Comment Section in Card Comment Section */
+.comment-section p {
+  text-align: left;
+}
+
+/* Review String */
+.review-card p:last-child {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Review Link Styles */
+#reviewCard a {
+  color: #db8234;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#reviewCard a:hover {
+  color: #207dbb;
+}
+
+
+/* Menu Section */
+#menu {
+  background-color: #bfbfbf;
+  color: #333;
+}
+
+.menu-container {
+  width: 100%;
+  background-color: #f2f2f2; /* Background color for the menu container */
+  color: #333; /* Text color */
+  margin: 20px; /* Add margin for spacing between the menu container and other sections */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  padding: 20px; /* Add padding to the menu container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+/* Menu Header */
+.menu-header {
+  width: 100%;
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Menu Navigation Bar */
+.menu-navigation {
+  width: 100%;
+  background-color: #2ecc71;
+  text-align: center;
+}
+
+.menu-navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.menu-navigation li {
+  margin: 0;
+}
+
+.menu-navigation a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-navigation a:hover {
+  background-color: #27ae60;
+}
+
+/* Menu Grid */
+.menu-grid {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.menu-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 10px; /* Adding rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-grid-item-image {
+  width: 100%;
+  height: 100px;
+  border-radius: 15%; /* Adding rounded corners to the image */
+}
+
+.menu-grid-item-title {
+  margin-top: 10px;
+}
+
+.menu-grid-item-paragraph {
+  margin-top: 10px;
+}
+
+
+/* Events Section */
+#events {
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+}
+
+.event-box {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.event-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure the header is above the image */
+}
+
+.event-box-image {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+  position: relative; /* Ensure z-index works */
+  z-index: 0; /* Set a lower z-index than the header */
+}
+
+
+/* Masonry Container */
+#masonry-event-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Style for each masonry item */
+.masonry-event-item {
+  flex: 0 0 calc(33.33% - 20px); /* Adjust width as needed for the number of columns */
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Styles */
+.event-card {
+  width: 300px;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 5px; */
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* Header Styles */
+.event-card-header {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Image Styles */
+.event-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Paragraph Styles */
+.event-card p {
+  margin-bottom: 10px;
+}
+
+/* Rows Styles */
+.event-rows {
+  margin-bottom: 10px;
+}
+
+.event-rows div {
+  margin-bottom: 5px;
+}
+
+/* Comments Styles */
+.event-comments {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.event-comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.event-comment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.event-comment .user-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-comment p {
+  margin: 0;
+  text-align: left;
+}
+
+
+/* Posts Section */
+#posts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Posts Header */
+#posts div.header {
+  width: 100%;
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Flexbox Grid for Cards */
+.posts-flexbox-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Card Styles */
+.posts-card {
+  flex: 0 0 calc(33.33% - 20px); /* Adjust width as needed for the number of columns */
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+/* Card Image */
+/* .posts-card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 20px;
+} */
+
+/* Swiper Styles */
+.swiper-container {
+  width: 100%;
+  margin: 20px 0;
+  overflow: hidden; /* Hide the overflow content */
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease; /* Add smooth transition */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px; /* Adjust as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+/* Hide adjacent slides */
+.swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 0.5; /* Adjust opacity as needed */
+}
+
+/* Center active slide */
+.swiper-slide-active {
+  transform: scale(1.1); /* Adjust the scaling factor as needed */
+  opacity: 1;
+}
+
+
+/* Pagination Styles */
+.swiper-pagination {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #007aff; /* Adjust the color as needed */
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #004777; /* Adjust the active color as needed */
+  opacity: 1;
+}
+
+
+/* Reactions Column Image */
+.posts-reactions-column img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Reactions Column Text */
+.posts-reactions-column p {
+  margin-top: 5px;
+}
+
+/* Paragraph */
+.posts-paragraph {
+  margin-bottom: 20px;
+}
+
+/* Comment Section */
+.posts-comment-section {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Comment */
+.posts-comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* User Image */
+#posts-user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* User Content */
+.posts-user-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* User Comment */
+.posts-user-comment p {
+  margin: 0;
+  text-align: left;
+}
+
+
+/* Info Section */
+#info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.info-card {
+  width: 80%;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.contact {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-header {
+  background-color: #f2f2f2;
+  color: #99b31c;
+  padding: 20px;
+  text-align: start;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.working-hours,
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.working-hours div,
+.contact-info div {
+  margin-bottom: 10px;
+}
+
+.contact-map {
+  width: 50%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+/* Footer Section */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #2ecc71;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-main-section {
+  display: flex;
+  width: 100%;
+}
+
+.social-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+
+.services-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.column {
+  display: flex;
+}
+
+.products,
+.services,
+.resources {
+  flex: 1;
+}
+
+.footer-rights-section {
+  display: flex;
+  width: 100%;
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  text-align: center;
+}
+
+
+
+  
